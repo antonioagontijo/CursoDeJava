@@ -24,11 +24,12 @@ public class JavaAula1 {
         System.getProperties();
         System.out.println(System.getProperty("user.language"));
         
+        //Para mostrar resolução da tela
         Toolkit t = Toolkit.getDefaultToolkit();
         Dimension d = t.getScreenSize();
         System.out.println("A resolução da tela é: " +d.width + "x" +d.height);
         
-        
+        //Para mostrar idioma do sistema
         Locale idioma = Locale.getDefault();
         System.out.println("O idioma do seu sistema é " + idioma.getDisplayLanguage());
         //System.out.println(idioma.getDisplayLanguage());
