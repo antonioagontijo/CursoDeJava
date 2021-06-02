@@ -5,6 +5,8 @@
  */
 package aula_swing;
 
+import java.util.Date;
+
 /**
  *
  * @author Study PC
@@ -29,12 +31,14 @@ public class AulaSwing extends javax.swing.JFrame {
 
         lblMensagem = new javax.swing.JLabel();
         btnClick = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         lblMensagem.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        lblMensagem.setForeground(new java.awt.Color(255, 0, 0));
-        lblMensagem.setText("Mensagem aqui");
+        lblMensagem.setForeground(new java.awt.Color(153, 153, 153));
+        lblMensagem.setText("Clique no Botão");
 
         btnClick.setText("Clique aqui");
         btnClick.addActionListener(new java.awt.event.ActionListener() {
@@ -43,36 +47,54 @@ public class AulaSwing extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagem/voce-sabia-que-ja-existiu-mais-de-8-calendarios-se-nao-confira-agora.jpg"))); // NOI18N
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel2.setText("Data e Hora atuais.");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(jLabel1)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(147, 147, 147)
-                        .addComponent(btnClick))
+                        .addGap(98, 98, 98)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblMensagem)
+                            .addComponent(jLabel2)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(130, 130, 130)
-                        .addComponent(lblMensagem)))
-                .addContainerGap(132, Short.MAX_VALUE))
+                        .addGap(119, 119, 119)
+                        .addComponent(btnClick)))
+                .addContainerGap(119, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(54, 54, 54)
-                .addComponent(lblMensagem)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
-                .addComponent(btnClick)
-                .addGap(41, 41, 41))
+                .addGap(33, 33, 33)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblMensagem)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                        .addComponent(btnClick)
+                        .addGap(26, 26, 26))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnClickActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClickActionPerformed
-        // TODO add your handling code here:
-        lblMensagem.setText("Olá Mundo!!");
+
+        Date t = new Date();
+        
+        lblMensagem.setText(t.toString());
     }//GEN-LAST:event_btnClickActionPerformed
 
     /**
@@ -112,6 +134,8 @@ public class AulaSwing extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnClick;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lblMensagem;
     // End of variables declaration//GEN-END:variables
 }
