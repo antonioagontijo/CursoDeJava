@@ -76,7 +76,7 @@ public class Divisor extends javax.swing.JFrame {
             }
         });
 
-        btnReset.setText("Reset");
+        btnReset.setText("Limpar");
         btnReset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnResetActionPerformed(evt);
